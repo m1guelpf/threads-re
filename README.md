@@ -116,7 +116,7 @@ This request returns a big JSON payload. Your token will be immediately after th
 
 ```bash
 curl --request POST \
-  --url https://i.instagram.com/api/v1/media/configure_text_only_post/
+  --url 'https://i.instagram.com/api/v1/media/configure_text_only_post/' \
   --header 'content-type: application/x-www-form-urlencoded; charset=UTF-8' \
   --header 'user-agent: Barcelona 289.0.0.77.109 Android' \
   --header 'authorization: Bearer IGT:2:$TOKEN' \
