@@ -93,6 +93,9 @@ curl --request POST \
 
 ### Authentication
 
+> **Warning**
+> This endpoint currently only works for accounts without 2FA enabled.
+
 The mobile apps use Meta's Bloks framework ([originally built for Instagram Lite](https://thenewstack.io/instagram-lite-is-no-longer-a-progressive-web-app-now-a-native-app-built-with-bloks/)) for authentication.
 
 The bloks versioning ID for threads is `00ba6fa565c3c707243ad976fa30a071a625f2a3d158d9412091176fe35027d8`. Bloks also requires you to provide a device id (of shape `ios-RANDOM` | `android-RANDOM`, `RANDOM` being a random set of 13 chars).
