@@ -89,6 +89,38 @@ curl --request POST \
   --data doc_id=9360915773983802
 ```
 
+## Mobile Apps
+
+### Authentication
+
+The mobile apps use Meta's Bloks framework ([originally built for Instagram Lite](https://thenewstack.io/instagram-lite-is-no-longer-a-progressive-web-app-now-a-native-app-built-with-bloks/)) for authentication.
+
+The bloks versioning ID for threads is `00ba6fa565c3c707243ad976fa30a071a625f2a3d158d9412091176fe35027d8`. Bloks also requires you to provide a device id (of shape `ios-RANDOM` | `android-RANDOM`, `RANDOM` being a random set of 13 chars).
+
+```bash
+curl --request POST \
+  --url 'https://i.instagram.com/api/v1/bloks/apps/com.bloks.www.bloks.caa.login.async.send_login_request/' \
+  --header 'user-agent: Barcelona 289.0.0.77.109 Android' \
+  --header 'sec-fetch-site: same-origin' \
+  --header 'content-type: application/x-www-form-urlencoded; charset=UTF-8' \
+  --data 'params={"client_input_params":{"password":"$PASSWORD","contact_point":"$USERNAME","device_id":"$DEVICE_ID"},"server_params":{"credential_type":"password","device_id":"$DEVICE_ID"}}' \
+  --data 'bloks_versioning_id=00ba6fa565c3c707243ad976fa30a071a625f2a3d158d9412091176fe35027d8'
+```
+
+This request returns a big JSON payload. Your token will be immediately after the string `Bearer IGT:2:`, and should be 160 characters long.
+
+### Creating a text post
+
+```bash
+curl --request POST \
+  --url https://i.instagram.com/api/v1/media/configure_text_only_post/
+  --header 'content-type: application/x-www-form-urlencoded; charset=UTF-8' \
+  --header 'user-agent: Barcelona 289.0.0.77.109 Android' \
+  --header 'authorization: Bearer IGT:2:$TOKEN' \
+  --header 'sec-fetch-site: same-origin' \
+  --data 'signed_body=SIGNATURE.{"publish_mode":"text_post","text_post_app_info":"{\"reply_control\":0}","timezone_offset":"0","source_type":"4","_uid":"$USER_ID","device_id":"$DEVICE_ID","caption":"$POST_TEXT","device":{"manufacturer":"OnePlus","model":"ONEPLUS+A3003","android_version":26,"android_release":"8.1.0"}}
+```
+
 ## Misc
 
 ### How to get a profile's id from their username?
