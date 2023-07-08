@@ -18,7 +18,7 @@ The web version of Threads is currently read-only, so not much can be learned ab
 ```bash
 curl --request POST \
   --url https://www.threads.net/api/graphql \
-  --header 'user-agent: threads-client'
+  --header 'user-agent: threads-client' \
   --header 'x-ig-app-id: 238260118697367' \
   --header 'content-type: application/x-www-form-urlencoded' \
   --data 'variables={"userID":"314216"}' \
@@ -34,7 +34,7 @@ curl --request POST \
 ```bash
 curl --request POST \
   --url https://www.threads.net/api/graphql \
-  --header 'user-agent: threads-client'
+  --header 'user-agent: threads-client' \
   --header 'x-ig-app-id: 238260118697367' \
   --header 'content-type: application/x-www-form-urlencoded' \
   --data 'variables={"userID":"314216"}' \
@@ -50,7 +50,7 @@ curl --request POST \
 ```bash
 curl --request POST \
   --url https://www.threads.net/api/graphql \
-  --header 'user-agent: threads-client'
+  --header 'user-agent: threads-client' \
   --header 'x-ig-app-id: 238260118697367' \
   --header 'content-type: application/x-www-form-urlencoded' \
   --data 'variables={"userID":"314216"}' \
@@ -66,7 +66,7 @@ curl --request POST \
 ```bash
 curl --request POST \
   --url https://www.threads.net/api/graphql \
-  --header 'user-agent: threads-client'
+  --header 'user-agent: threads-client' \
   --header 'x-ig-app-id: 238260118697367' \
   --header 'content-type: application/x-www-form-urlencoded' \
   --data 'variables={"postID":"3138977881796614961"}' \
@@ -82,7 +82,7 @@ curl --request POST \
 ```bash
 curl --request POST \
   --url https://www.threads.net/api/graphql \
-  --header 'user-agent: threads-client'
+  --header 'user-agent: threads-client' \
   --header 'x-ig-app-id: 238260118697367' \
   --header 'content-type: application/x-www-form-urlencoded' \
   --data 'variables={"mediaID":"3138977881796614961"}' \
