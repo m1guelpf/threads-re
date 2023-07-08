@@ -18,8 +18,9 @@ The web version of Threads is currently read-only, so not much can be learned ab
 ```bash
 curl --request POST \
   --url https://www.threads.net/api/graphql \
-  --header 'content-type: application/x-www-form-urlencoded' \
+  --header 'user-agent: threads-client'
   --header 'x-ig-app-id: 238260118697367' \
+  --header 'content-type: application/x-www-form-urlencoded' \
   --data 'variables={"userID":"314216"}' \
   --data doc_id=23996318473300828
 ```
@@ -33,8 +34,9 @@ curl --request POST \
 ```bash
 curl --request POST \
   --url https://www.threads.net/api/graphql \
-  --header 'content-type: application/x-www-form-urlencoded' \
+  --header 'user-agent: threads-client'
   --header 'x-ig-app-id: 238260118697367' \
+  --header 'content-type: application/x-www-form-urlencoded' \
   --data 'variables={"userID":"314216"}' \
   --data doc_id=6232751443445612
 ```
@@ -48,8 +50,9 @@ curl --request POST \
 ```bash
 curl --request POST \
   --url https://www.threads.net/api/graphql \
-  --header 'content-type: application/x-www-form-urlencoded' \
+  --header 'user-agent: threads-client'
   --header 'x-ig-app-id: 238260118697367' \
+  --header 'content-type: application/x-www-form-urlencoded' \
   --data 'variables={"userID":"314216"}' \
   --data doc_id=6307072669391286
 ```
@@ -63,8 +66,9 @@ curl --request POST \
 ```bash
 curl --request POST \
   --url https://www.threads.net/api/graphql \
-  --header 'content-type: application/x-www-form-urlencoded' \
+  --header 'user-agent: threads-client'
   --header 'x-ig-app-id: 238260118697367' \
+  --header 'content-type: application/x-www-form-urlencoded' \
   --data 'variables={"postID":"3138977881796614961"}' \
   --data doc_id=5587632691339264
 ```
@@ -78,8 +82,9 @@ curl --request POST \
 ```bash
 curl --request POST \
   --url https://www.threads.net/api/graphql \
-  --header 'content-type: application/x-www-form-urlencoded' \
+  --header 'user-agent: threads-client'
   --header 'x-ig-app-id: 238260118697367' \
+  --header 'content-type: application/x-www-form-urlencoded' \
   --data 'variables={"mediaID":"3138977881796614961"}' \
   --data doc_id=9360915773983802
 ```
