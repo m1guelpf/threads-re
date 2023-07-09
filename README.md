@@ -121,7 +121,7 @@ curl --request POST \
   --header 'user-agent: Barcelona 289.0.0.77.109 Android' \
   --header 'authorization: Bearer IGT:2:$TOKEN' \
   --header 'sec-fetch-site: same-origin' \
-  --data 'signed_body=SIGNATURE.{"publish_mode":"text_post","text_post_app_info":"{\"reply_control\":0}","timezone_offset":"0","source_type":"4","_uid":"$USER_ID","device_id":"$DEVICE_ID","caption":"$POST_TEXT","device":{"manufacturer":"OnePlus","model":"ONEPLUS+A3003","android_version":26,"android_release":"8.1.0"}}
+  --data 'signed_body=SIGNATURE.{"publish_mode":"text_post","text_post_app_info":"{\"reply_control\":0}","timezone_offset":"0","source_type":"4","_uid":"$USER_ID","device_id":"$DEVICE_ID","caption":"$POST_TEXT","device":{"manufacturer":"OnePlus","model":"ONEPLUS+A3003","android_version":26,"android_release":"8.1.0"}}'
 ```
 
 ## Misc
